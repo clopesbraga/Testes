@@ -1,0 +1,83 @@
+package Definicoes;
+
+import Pagina.Formulario;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class DefAcessoAutomacaoBatista {
+	
+	Formulario automacaobatista= new Formulario();
+	
+	@Given("Estar na pagina Automacao Batista")
+	public void AbrirPagina() 
+	{
+		automacaobatista.CarregaPagina();
+		automacaobatista.verificaElementoTexto("Começar Automação Web");
+	}
+	
+	@And("Acessar a pagina de treinamento")
+	public void acessarPaginaTreinamento()
+	{
+			
+		automacaobatista.Clicar();
+		
+	}
+	
+	@When("Acessar os formulários")
+	public void acessarFormularios() 
+	{
+		
+		
+		automacaobatista.verificaElementoTexto("Formulário"); automacaobatista.Clicar();
+		
+		
+	}
+	
+	@And("Criar um usuario")
+	public void criarUsuario()
+	{
+		
+		automacaobatista.verificaElementoTexto("Criar Usuários"); automacaobatista.Clicar();
+		
+	}
+	
+	@Then("Preencher os campos")
+	public void preencherDados()
+	{
+		
+		/*ACESSO A TELA DE BOTOES*/
+		
+		//automacaobatista.verificaElementoTexto("Busca de elementos"); automacaobatista.Clicar();
+		//automacaobatista.verificaElementoTexto("Botões"); automacaobatista.Clicar();
+		//automacaobatista.verificaElementoId("teste"); automacaobatista.Clicar();
+		
+		
+		
+		/*PREENCHIMENTO DOS DADOS*/
+		automacaobatista.preencheDados("user_name","Cleiton");
+		automacaobatista.preencheDados("user_lastname","Lopes Braga");
+		automacaobatista.preencheDados("user_email","cleiton.braga@inmetrics.com.br");
+		automacaobatista.preencheDados("use_address","Avenida Guarulhos");
+		automacaobatista.preencheDados("user_university","Drummond");
+		automacaobatista.preencheDados("user_profile","Test Software Enginner");
+		automacaobatista.preencheDados("user_gender","Masculino");
+		automacaobatista.preencheDados("user_age","38");
+		
+		
+		automacaobatista.verificaElementoBotao("commit");automacaobatista.Clicar();
+				
+	}
+	
+	
+	@And("Terminar Teste")
+	public void terminarTeste()
+	{
+		
+		automacaobatista.fecharPagina();
+		
+	}
+
+	
+}

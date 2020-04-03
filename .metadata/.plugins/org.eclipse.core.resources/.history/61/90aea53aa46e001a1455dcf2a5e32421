@@ -1,0 +1,59 @@
+package Pagina;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
+
+import BaseTestes.BaseTestes;
+import cucumber.api.java.de.Aber;
+
+public class AutomacaoBatista extends BaseTestes {
+	
+	int tempoMilisegundos= 5000;
+	
+	public void CarregaPagina() 
+	{
+		
+				
+			abreNavegador();
+				
+		
+	}
+	
+	public WebElement verificaElementoTexto(String elemento) 
+	{
+		Thread tempo = new Thread();
+		
+		synchronized(tempo) 
+		{
+			
+			try 
+			{
+				
+				confereElementoTexto(elemento);
+				tempo.wait(tempoMilisegundos);
+				
+				
+			}catch(Exception e) {}
+			
+			
+		}
+		
+		return	confereElementoTexto(elemento);		
+		
+	}
+	
+	public WebElement verificaElementoBotao(String elemento) 
+	{
+		
+		return  confereElementoBotao(elemento);
+			
+	}
+	
+	public void Clicar() 
+	{
+		acionaBotao();
+	}
+	
+	
+
+}

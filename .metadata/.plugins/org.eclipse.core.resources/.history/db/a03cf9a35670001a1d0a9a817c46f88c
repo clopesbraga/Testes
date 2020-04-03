@@ -1,0 +1,20 @@
+#language: pt
+
+Funcionalidade: Acesso site
+
+
+
+ @formulario 
+ Cenario: Preencher Forumlário
+ Dado     Ao estar na pagina Automacao Batista 
+ Quando   Acessar os formularios
+ Entao    Preencher os campos
+ 
+
+
+@botao
+ Cenario: Testar Botoes
+ Dado     Ao estar na pagina Automacao Batista 
+ Quando   Acessar os testes de botoes
+ Entao    Realizar os testes de click
+ 

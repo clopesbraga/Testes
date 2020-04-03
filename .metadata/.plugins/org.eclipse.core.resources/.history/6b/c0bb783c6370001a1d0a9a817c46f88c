@@ -1,0 +1,17 @@
+#language: pt
+
+Funcionalidade: Acesso site
+
+
+
+ @formulario 
+ Cenario: Preencher Forumlário
+ Dado     Ao estar na pagina Automacao Batista 
+ Quando   Acessar os formularios
+ Entao    Preencher os campos: <nome>,<ultimo_nome>,<e-mail>,<endereco>,<universidade>,<profissao>,<genero>,<idade>
+ 
+     Examples: 
+      | nome   | ultimo nome | email             |  endereco  | universidade | profissao   | Genero | idade |
+      | Cleiton| Lopes Braga | clopesbraga@gmail |AV.Guarulhos| Drummond     |Test engineer| masc   | 38    |
+      
+ 

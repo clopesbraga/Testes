@@ -1,0 +1,49 @@
+package Definicoes;
+
+import Pagina.Formulario;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import cucumber.api.java.es.Dado;
+import cucumber.api.java.it.Quando;
+import cucumber.api.java.pt.Entao;
+
+public class DefAcessoBotao {
+	
+	Botoes automacaobatista= new Botoes();
+	
+	@Dado("Ao estar na pagina Automacao Batista")
+	public void AbrirPagina() 
+	{
+		automacaobatista.CarregaPagina();
+		automacaobatista.verificaElementoTexto("Começar Automação Web");
+		automacaobatista.Clicar();
+	}
+		
+	@Quando("Acessar os testes de botoes")
+	public void acessarBotoes() 
+	{		
+		automacaobatista.verificaElementoTexto("Busca de elementos"); automacaobatista.Clicar();
+		automacaobatista.verificaElementoTexto("Botões"); automacaobatista.Clicar();				
+	}
+	
+	@Entao("Realizar os testes de click")
+	public void preencherDados()
+	{
+		
+		/*ACESSO A TELA DE BOTOES*/
+		
+		//automacaobatista.verificaElementoTexto("Busca de elementos"); automacaobatista.Clicar();
+		//automacaobatista.verificaElementoTexto("Botões"); automacaobatista.Clicar();
+		automacaobatista.verificaElementoId("teste"); automacaobatista.Clicar();
+		automacaobatista.verificaElementoBotao("teste"); automacaobatista.Clicar();
+	
+		
+		automacaobatista.verificaElementoBotao("commit");automacaobatista.Clicar();
+		automacaobatista.fecharPagina();		
+	}
+	
+
+	
+}

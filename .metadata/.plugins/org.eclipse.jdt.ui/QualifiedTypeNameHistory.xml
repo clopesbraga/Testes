@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="BaseTestes.BaseTestes"/>
+<fullyQualifiedTypeName name="cucumber.api.java.de.Aber"/>
+<fullyQualifiedTypeName name="Pagina.AutomacaoBatista"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.Given"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.internal.WebElementToJsonConverter"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.When"/>
+<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+<fullyQualifiedTypeName name="cucumber.api.CucumberOptions"/>
+<fullyQualifiedTypeName name="cucumber.api.junit.Cucumber"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.Then"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By.ByClassName"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By.ByCssSelector"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By.ByName"/>
+<fullyQualifiedTypeName name="cucumber.api.java.es.Dado"/>
+<fullyQualifiedTypeName name="cucumber.api.java.it.Quando"/>
+<fullyQualifiedTypeName name="cucumber.api.java.pt.Entao"/>
+<fullyQualifiedTypeName name="Pagina.Botoes"/>
+<fullyQualifiedTypeName name="Pagina.Formulario2"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="Interacoes.PreencherFormulario"/>
+</qualifiedTypeNameHistroy>

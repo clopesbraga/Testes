@@ -1,0 +1,60 @@
+package Definicoes;
+
+import Pagina.Formulario;
+import Pagina.Formulario2;
+import cucumber.api.java.es.Dado;
+import cucumber.api.java.it.Quando;
+import cucumber.api.java.pt.Entao;
+
+public class DefAcessoFormulario2 {
+	
+	Formulario2 automacaobatista= new Formulario2();
+	
+	@Dado("Ao iniciar o processo de Preencher varios forumularios")
+	public void AbrirPagina() 
+	{
+		automacaobatista.CarregaPagina();
+		automacaobatista.verificaElementoTexto("Começar Automação Web");
+		automacaobatista.Clicar();
+	}
+		
+	@Quando("Acessar os formularios")
+	public void acessarFormularios() 
+	{		
+		automacaobatista.verificaElementoTexto("Formulário"); automacaobatista.Clicar();
+		automacaobatista.verificaElementoTexto("Criar Usuários"); automacaobatista.Clicar();				
+	}
+	
+	@Entao("Preencher os campos:\\\"([^\\\"]*)\\\".$,"
+								+ "\\\"([^\\\"]*)\\\".$,"
+								+ "\\\"([^\\\"]*)\\\".$,"
+								+ "\\\"([^\\\"]*)\\\".$,"
+								+ "\\\"([^\\\"]*)\\\".$,"
+								+ "\\\"([^\\\"]*)\\\".$,"
+								+ "<\\\"([^\\\"]*)\\\".$,"
+								+ "\\\"([^\\\"]*)\\\".$")
+	public void preencherDados(String name,String lastname, String email, String endereco,String universidade,String profissao,String genero, int idade)
+	{
+		
+		
+		/*PREENCHIMENTO DOS DADOS
+		automacaobatista.preencheCampo("user_name","Cleiton");
+		automacaobatista.preencheCampo("user_lastname","Lopes Braga");
+		automacaobatista.preencheCampo("user_email","cleiton.braga@inmetrics.com.br");
+		automacaobatista.preencheCampo("user_address","Avenida Guarulhos");
+		automacaobatista.preencheCampo("user_university","Drummond");
+		automacaobatista.preencheCampo("user_profile","Test Software Enginner");
+		automacaobatista.preencheCampo("user_gender","Masculino");
+		automacaobatista.preencheCampo("user_age","38");*/
+		
+		
+		
+		
+				
+		automacaobatista.verificaElementoBotao("commit");automacaobatista.Clicar();
+		automacaobatista.fecharPagina();		
+	}
+	
+
+	
+}

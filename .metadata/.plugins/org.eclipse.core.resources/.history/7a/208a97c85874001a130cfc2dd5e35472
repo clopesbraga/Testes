@@ -1,0 +1,17 @@
+#language: pt
+
+Funcionalidade: Acesso site
+
+
+
+ @formulario2 
+ Esquema do Cenario: Preencher Forumlário
+ 
+ Dado     Ao iniciar o processo de Preencher varios forumularios
+ Quando   Ir na opcao formularios
+ Entao    Completar os campos: <user_name>,<user_lastname>,<user_email>,<user_address>,<user_university>,<user_profile>,<user_gender>,"<user_age>"
+ 
+ Exemplos: 
+      |user_name|user_lastname  | user_email        |user_address     | user_university |user_profile |user_gender|user_age|
+      |Cleiton  |Lopes Braga    | clopesbraga@gmail |AV_Guarulhos     | Drummond        |Test engineer|masc       | '38'   |
+      
