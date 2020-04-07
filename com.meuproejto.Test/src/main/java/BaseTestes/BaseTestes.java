@@ -7,79 +7,60 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 
+import Configuracao.Config;
+
 public class BaseTestes {
 	
-	public WebDriver driver;
-	public WebElement elemento;
-	
-	//String chromedriver= ("user.dir")+"/Chromedriver/chromedriver.exe";
-	String usardiretorio = "user.dir";
-	String chromedriver=     "/browser/chromedriver.exe";
-	String firefoxdriver =  "/browser/geckodriver.exe";
-	String site=		   "https://automacaocombatista.herokuapp.com";
-	
-	
-	
+	Config config = new Config();
 	
 	public void abreNavegador() 
 	{
-		
-		//System.setProperty("webdriver.chrome.driver",System.getProperty(chromedriver));
-		
-		//CHROME
-		System.setProperty("webdriver.chrome.driver",System.getProperty(usardiretorio)+chromedriver);
-		driver= new ChromeDriver();
-		driver.navigate().to(site);
-		
-		//FIREFOX
-		/*System.setProperty("webdriver.gecko.driver",System.getProperty(usardiretorio)+firefoxdriver);
-		driver= new FirefoxDriver();
-		driver.navigate().to(site);*/
+		//config.chromeNavegador();
+		//config.edgeNavegador();
+		//config.ieNavegador();
+		  config.firefoxNavegador();
 		
 	}
 	
 	public WebElement confereElementoTexto(String xpath) 
 	{
-		
-		elemento = driver.findElement(By.xpath("//a[contains(text(),'"+xpath+"')]"));
-		return elemento;
-		
+		config.setElemento(config.getDriver().findElement(By.xpath("//a[contains(text(),'"+xpath+"')]")));
+		return config.getElemento();	
 	}
 	
 	public WebElement confereElementoBotao(String xpath) 
 	{
 		
-		elemento = driver.findElement(By.name(xpath));
-		return elemento;
+		config.setElemento(config.getDriver().findElement(By.name(xpath)));
+		return config.getElemento();
 		
 	}
 	
 
 	public WebElement confereElementoId(String xpath) 
-	{
-		elemento = driver.findElement(By.id(xpath));
-		return elemento;
+	{	
+		config.setElemento(config.getDriver().findElement(By.id(xpath)));
+		return config.getElemento();
 	}
 	
 	
 	public WebElement preencheDados(String xpath,String dados ) 
 	{
-		elemento = driver.findElement(By.id(xpath));
-		elemento.sendKeys(dados);
-		return elemento;
+		config.setElemento(config.getDriver().findElement(By.id(xpath)));
+		config.getElemento().sendKeys(dados);
+		return config.getElemento();
 	}
 	
 	public void acionaBotao() 
 	{
-		
-		if(elemento.isEnabled()) {elemento.click();}		
-		
+			
+		if(config.getElemento().isEnabled()) {config.getElemento().click();}
 	}
 	
 	public void fechaNavegador() 
 	{
 		
-		driver.quit();
+		config.getDriver().quit();
 		
 	}
 	

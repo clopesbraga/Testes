@@ -11,19 +11,18 @@ public class DefAcessoFormulario2 {
 	
 	Formulario2 automacaobatista= new Formulario2();
 	
-	
-	@Dado("Ao iniciar o processo de Preencher varios forumularios")
-	public void AbrirPagina() 
+	@Dado("^Ao iniciar o processo de Preencher varios forumularios$")
+	public void ao_iniciar_o_processo_de_Preencher_varios_forumularios() throws Throwable 
 	{
+	  
 		automacaobatista.CarregaPagina();
-		automacaobatista.verificaElementoTexto("Começar Automação Web");
-		automacaobatista.Clicar();
+		automacaobatista.verificaElementoTexto("Começar Automação Web");automacaobatista.Clicar();
+		automacaobatista.verificaElementoTexto("Formulário"); automacaobatista.Clicar();
 	}
 		
-	@Quando("Ir na opcao formularios")
-	public void acessarFormularios() 
+	@Quando("Ir na opcao novo usuario")
+	public void criarNovosUsuarios() 
 	{		
-		automacaobatista.verificaElementoTexto("Formulário"); automacaobatista.Clicar();
 		automacaobatista.verificaElementoTexto("Criar Usuários"); automacaobatista.Clicar();				
 	}
 	

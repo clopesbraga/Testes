@@ -9,19 +9,22 @@ public class DefAcessoFormulario {
 	
 	Formulario automacaobatista= new Formulario();
 	
-	@Dado("Ao estar na pagina Automacao Batista")
-	public void AbrirPagina() 
-	{
+	
+	@Dado("^Verificar   a opcao de formularios$")
+	public void verificar_a_opcao_de_formularios() throws Throwable {
+	   
 		automacaobatista.CarregaPagina();
-		automacaobatista.verificaElementoTexto("Começar Automação Web");
-		automacaobatista.Clicar();
-	}
-		
-	@Quando("Acessar os formularios")
-	public void acessarFormularios() 
-	{		
+		automacaobatista.verificaElementoTexto("Começar Automação Web");automacaobatista.Clicar();
 		automacaobatista.verificaElementoTexto("Formulário"); automacaobatista.Clicar();
-		automacaobatista.verificaElementoTexto("Criar Usuários"); automacaobatista.Clicar();				
+		
+	}
+	
+	@Quando("Clicar em novo usuario")
+	public void criarNovoUsuario() 
+	{
+		
+		automacaobatista.verificaElementoTexto("Criar Usuários"); automacaobatista.Clicar();
+		
 	}
 	
 	@Entao("Preencher os campos")
@@ -44,6 +47,5 @@ public class DefAcessoFormulario {
 		automacaobatista.fecharPagina();		
 	}
 	
-
 	
 }
