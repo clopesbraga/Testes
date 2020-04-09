@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 
 import BaseTestes.BaseTestes;
+import Servicos.CapturaTela;
 import cucumber.api.java.de.Aber;
 
 public class Formulario2 extends BaseTestes {
@@ -78,6 +79,9 @@ public class Formulario2 extends BaseTestes {
 	
 	public void Clicar() 
 	{
+		CapturaTela tela = new CapturaTela();
+		
+		tela.print();
 		acionaBotao();
 	}
 	

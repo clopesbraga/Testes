@@ -27,16 +27,10 @@ public class DefAcessoBotao {
 	@Entao("Realizar os testes de click")
 	public void clickTestes()
 	{
-		
-		
-		automacaobatista.verificaElementoId("teste"); automacaobatista.Clicar();
-		//automacaobatista.verificaElementoTexto("btn-floating"); automacaobatista.Clicar();
-		//automacaobatista.verificaElementoBotao("Submmit"); automacaobatista.Clicar();
-		//automacaobatista.verificaElementoBotao("Voltar"); automacaobatista.Clicar();
-		
+			
+		automacaobatista.verificaElementoId("teste"); automacaobatista.Clicar();	
+		automacaobatista.fecharPagina();	
 	
-	
-		//automacaobatista.fecharPagina();		
 	}
 	
 

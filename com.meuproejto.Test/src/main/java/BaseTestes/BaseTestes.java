@@ -7,11 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 
-import Configuracao.Config;
+import Configuracao.ConfigNavegadores;
+import Configuracao.ConfigRelatorios;
 
 public class BaseTestes {
 	
-	Config config = new Config();
+	ConfigNavegadores config = new ConfigNavegadores();
+	ConfigRelatorios config2 = new ConfigRelatorios();
 	
 	public void abreNavegador() 
 	{
@@ -63,6 +65,8 @@ public class BaseTestes {
 		config.getDriver().quit();
 		
 	}
+	
+
 	
 
 }

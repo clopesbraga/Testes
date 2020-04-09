@@ -3,3 +3,8 @@
 1586260827182	Copy compilation unit
 1586261026819	Copy compilation unit
 1586289404277	Delete element
+1586433772444	Rename local variable 'print'
+1586446403729	Rename type 'Config'
+1586456302167	Delete element
+1586462330148	Move 'Logo.jpg' to 'Logo'
+1586462334893	Delete element

@@ -1,0 +1,14 @@
+package Servicos;
+
+import Configuracao.ConfigRelatorios;
+
+public class GerarRelatorio {
+	
+	
+	ConfigRelatorios servicos = new ConfigRelatorios();
+	
+	servicos.
+	
+	
+
+}

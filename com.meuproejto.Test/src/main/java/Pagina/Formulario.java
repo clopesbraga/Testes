@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 
 import BaseTestes.BaseTestes;
+import Servicos.CapturaTela;
 import cucumber.api.java.de.Aber;
 
 public class Formulario extends BaseTestes {
