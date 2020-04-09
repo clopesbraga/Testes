@@ -32,4 +32,5 @@
 <fullyQualifiedTypeName name="Configuracao.Config"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.edge.EdgeDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
+<fullyQualifiedTypeName name="java.awt.Robot"/>
 </qualifiedTypeNameHistroy>

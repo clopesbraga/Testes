@@ -22,5 +22,11 @@ Funcionalidade: Acesso site
       |Cleiton  |Lopes Braga    | clopesbraga@gmail.com |AV_Guarulhos     | Drummond        |Test engineer|masc       |38      |
       |Octaviano|Nuna Freitas   | ak47@gmail.com 				|Rua Montes Aureos| Uninove         |Analista N3  |masc       |37      |
       
-     
+
+
+ @Cenario3 
+ Cenario: Listando usuarios cadastrados
+ Dado     Ao acessar a tela de funcoes
+ Quando   Clicar em listar usuarios
+ Entao    Passar pelas paginas     
       

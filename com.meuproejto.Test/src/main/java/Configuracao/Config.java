@@ -16,7 +16,7 @@ public class Config {
 	private String usardiretorio =  "user.dir";
 	private String chromedriver  =  "/browser/chromedriver.exe";
 	private String firefoxdriver =  "/browser/geckodriver.exe";
-	private String edgedriver    =  "/browser/MicrosoftWebDriver.exe";
+	private String edgedriver    =  "/browser/msedgedriver.exe";
 	private String iedriver      =  "/browser/IEDriverServer.exe";
 	private String site          =  "https://automacaocombatista.herokuapp.com";
 	
@@ -64,4 +64,5 @@ public class Config {
 		driver.navigate().to(site);	
 	}
 
+	
 }

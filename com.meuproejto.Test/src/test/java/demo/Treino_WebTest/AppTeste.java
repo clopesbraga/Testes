@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions
 (
-		glue= 	  {"Definicoes","@Cenario1"},
+		glue= 	  {"Definicoes"},
 		features= {"./src/test/java/features/test01PreencherFormulario.feature"}
 )
 
