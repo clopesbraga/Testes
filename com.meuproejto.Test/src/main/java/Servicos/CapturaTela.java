@@ -10,19 +10,21 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class CapturaTela {
-		
+	
+	private String diretorio = "C:/Users/Cleiton Braga/Pictures/Testes/evidencia.jpg";
+	private int scalax 		 = 1366;
+	private int scalay 		 = 768;
+	
 	public void print() 
 	{
-		int pagina=0;	
+		
 		try 
 		{		
 			Robot robot = new Robot();
-			BufferedImage bi=robot.createScreenCapture(new Rectangle(800,400));
-			ImageIO.write(bi,"jpg", new File("C:/Users/Cleiton Braga/Pictures/Testes/imageTest"+pagina+".jpg"));
-			pagina++;
+			BufferedImage bi=robot.createScreenCapture(new Rectangle(scalax,scalay));
+			ImageIO.write(bi,"jpg",new File(diretorio));
 			
 		}catch (AWTException e) { e.printStackTrace();
-		
 		}catch (IOException e) { e.printStackTrace();}
 				
 	}

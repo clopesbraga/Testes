@@ -12,8 +12,8 @@ import Configuracao.ConfigRelatorios;
 
 public class BaseTestes {
 	
-	ConfigNavegadores config = new ConfigNavegadores();
-	ConfigRelatorios config2 = new ConfigRelatorios();
+	ConfigNavegadores config  =  new ConfigNavegadores();
+	ConfigRelatorios  config2 =  new ConfigRelatorios ();
 	
 	public void abreNavegador() 
 	{
@@ -31,21 +31,17 @@ public class BaseTestes {
 	}
 	
 	public WebElement confereElementoBotao(String xpath) 
-	{
-		
+	{		
 		config.setElemento(config.getDriver().findElement(By.name(xpath)));
-		return config.getElemento();
-		
+		return config.getElemento();		
 	}
 	
-
 	public WebElement confereElementoId(String xpath) 
 	{	
 		config.setElemento(config.getDriver().findElement(By.id(xpath)));
 		return config.getElemento();
 	}
-	
-	
+		
 	public WebElement preencheDados(String xpath,String dados ) 
 	{
 		config.setElemento(config.getDriver().findElement(By.id(xpath)));
@@ -54,16 +50,13 @@ public class BaseTestes {
 	}
 	
 	public void acionaBotao() 
-	{
-			
+	{			
 		if(config.getElemento().isEnabled()) {config.getElemento().click();}
 	}
 	
 	public void fechaNavegador() 
-	{
-		
-		config.getDriver().quit();
-		
+	{		
+		config.getDriver().quit();		
 	}
 	
 

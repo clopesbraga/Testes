@@ -34,7 +34,6 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
 <fullyQualifiedTypeName name="java.awt.Robot"/>
 <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
-<fullyQualifiedTypeName name="java.awt.Rectangle"/>
 <fullyQualifiedTypeName name="java.awt.AWTException"/>
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="java.io.File"/>
@@ -47,7 +46,12 @@
 <fullyQualifiedTypeName name="com.itextpdf.text.DocumentException"/>
 <fullyQualifiedTypeName name="Servicos.GerarRelatorio"/>
 <fullyQualifiedTypeName name="Configuracao.ConfigRelatorios"/>
-<fullyQualifiedTypeName name="com.itextpdf.text.Paragraph"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Image"/>
 <fullyQualifiedTypeName name="Servicos.GeraRelatorio"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.ColumnText"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.Phrase"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.Paragraph"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfPTable"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfPCell"/>
+<fullyQualifiedTypeName name="java.awt.Rectangle"/>
 </qualifiedTypeNameHistroy>

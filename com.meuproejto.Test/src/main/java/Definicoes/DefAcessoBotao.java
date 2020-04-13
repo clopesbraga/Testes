@@ -13,22 +13,21 @@ public class DefAcessoBotao {
 	public void IniciarTesteBotao() 
 	{
 		automacaobatista.CarregaPagina();
-		automacaobatista.verificaElementoTexto("Começar Automação Web");
-		automacaobatista.Clicar();
+		automacaobatista.verificaElementoTexto("Começar Automação Web","Step 1");automacaobatista.Clicar();
 	}
 		
 	@Quando("Acessar os testes de botoes")
 	public void acessarBotoes() 
 	{		
-		automacaobatista.verificaElementoTexto("Busca de elementos"); automacaobatista.Clicar();
-		automacaobatista.verificaElementoTexto("Botões"); automacaobatista.Clicar();				
+		automacaobatista.verificaElementoTexto("Busca de elementos","Step 2"); automacaobatista.Clicar();
+		automacaobatista.verificaElementoTexto("Botões","Step 3"); automacaobatista.Clicar();				
 	}
 	
 	@Entao("Realizar os testes de click")
 	public void clickTestes()
 	{
 			
-		automacaobatista.verificaElementoId("teste"); automacaobatista.Clicar();	
+		automacaobatista.verificaElementoId("teste","Step 4"); automacaobatista.Clicar();	
 		automacaobatista.fecharPagina();	
 	
 	}

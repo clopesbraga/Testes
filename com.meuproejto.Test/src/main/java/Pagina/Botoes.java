@@ -16,10 +16,10 @@ public class Botoes extends BaseTestes {
 	public void CarregaPagina() 
 	{				
 			abreNavegador();
-			relatorio.gerarDocumento("Relatorio-Teste");
+			relatorio.gerarDocumento("Relatorio_teste_botoes");
 	}
 	
-	public WebElement verificaElementoTexto(String elemento) 
+	public WebElement verificaElementoTexto(String elemento,String step) 
 	{
 		Thread tempo = new Thread();
 		
@@ -30,7 +30,8 @@ public class Botoes extends BaseTestes {
 			{				
 				confereElementoTexto(elemento);
 				tempo.wait(tempoMilisegundos);
-				relatorio.incluirPagina("Step 1 doTeste");
+				//relatorio.incluirPagina("Step 1 doTeste");
+				relatorio.incluirPagina(step);
 				
 			}catch(Exception e) {}
 			
@@ -48,21 +49,17 @@ public class Botoes extends BaseTestes {
 			
 	}
 	
-	public WebElement verificaElementoId(String elemento) 
+	public WebElement verificaElementoId(String elemento, String step) 
 	{
-		relatorio.incluirPagina("Step 3 do Teste");
+		relatorio.incluirPagina(step);
 		return  confereElementoId(elemento);
 			
 	}
 	
-	public WebElement preencheCampo(String elemento, String dados)
-	{
-		relatorio.incluirPagina("Step 4 do Teste");
-		return preencheDados(elemento,dados);
-	}
 
 	public void fecharPagina() 
 	{
+		
 		
 		Thread tempo = new Thread();
 		
@@ -70,12 +67,11 @@ public class Botoes extends BaseTestes {
 			{
 			
 				try 
-				{				
-					fechaNavegador();
-					
+				{
 					relatorio.incluirPagina("Teste Finalizado");
 					relatorio.encerrarDocumento();
-				
+					fechaNavegador();
+										
 				}catch(Exception e) {}
 		
 			}

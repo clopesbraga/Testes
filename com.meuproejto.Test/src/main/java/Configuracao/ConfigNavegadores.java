@@ -63,5 +63,5 @@ public class ConfigNavegadores {
 		driver= new InternetExplorerDriver();
 		driver.navigate().to(site);	
 	}
-		
+			
 }
