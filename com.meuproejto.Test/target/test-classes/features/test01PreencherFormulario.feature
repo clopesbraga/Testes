@@ -4,14 +4,14 @@ Funcionalidade: Acesso site
 
 
  @Cenario1 
- Cenario: Preencher um usuario no Forumlário
+ Cenario: Preencher um usuario no Forumlario
  Dado     Verificar   a opcao de formularios
  Quando   Clicar em novo usuario
  Entao    Preencher os campos
       
  
  @Cenario2 
- Esquema do Cenario: Preencher diversos usuarios Forumlário
+ Esquema do Cenario: Preencher diversos usuarios Forumlario
  
  Dado     Ao iniciar o processo de Preencher varios forumularios
  Quando   Ir na opcao novo usuario

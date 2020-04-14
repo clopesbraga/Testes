@@ -37,7 +37,6 @@
 <fullyQualifiedTypeName name="java.awt.AWTException"/>
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="Servicos.CapturaTela"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Document"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfWriter"/>
@@ -47,11 +46,16 @@
 <fullyQualifiedTypeName name="Servicos.GerarRelatorio"/>
 <fullyQualifiedTypeName name="Configuracao.ConfigRelatorios"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Image"/>
-<fullyQualifiedTypeName name="Servicos.GeraRelatorio"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.pdf.ColumnText"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Phrase"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Paragraph"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfPTable"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfPCell"/>
 <fullyQualifiedTypeName name="java.awt.Rectangle"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.time.LocalTime"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="Servicos.GeraRelatorio"/>
+<fullyQualifiedTypeName name="Servicos.CapturaTela"/>
 </qualifiedTypeNameHistroy>

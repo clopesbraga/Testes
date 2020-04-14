@@ -1,32 +1,25 @@
 package Servicos;
 
-import Configuracao.ConfigRelatorios;
+import configuracaoTestes.ConfigRelatorios;
 
 public class GeraRelatorio {
 	
 	ConfigRelatorios config = new ConfigRelatorios();
 	
 	public void gerarDocumento(String documento)
-	{
-		
-		config.geraPDF(documento);
-		
+	{	
+		config.geraPDF(documento);	
 	}
 	
 	public void incluirPagina(String cabecalho)
 	{
-		
 		config.incluirPagina(cabecalho);
-		
 	}
 	
-	
-	public void encerrarDocumento() 
-	{
-		
-		config.criarRodape();
-		config.encerrarPDF();
-		
+	public void encerrarDocumento(String nomePagina) 
+	{	
+		config.criarRodape(nomePagina);
+		config.encerrarPDF();	
 	}
 
 }

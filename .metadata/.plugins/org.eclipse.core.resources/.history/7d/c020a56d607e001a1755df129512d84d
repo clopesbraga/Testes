@@ -1,0 +1,62 @@
+package BaseTestes;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
+
+import Configuracao.ConfigNavegadores;
+import Configuracao.ConfigRelatorios;
+
+public class BaseTestes {
+	
+	ConfigNavegadores configNavegadores  =  new ConfigNavegadores();
+	ConfigRelatorios  configRelatorios =  new ConfigRelatorios ();
+	
+	public void abreNavegador() 
+	{
+		//config.chromeNavegador();
+		//config.edgeNavegador();
+		//config.ieNavegador();
+		configNavegadores.firefoxNavegador();
+		
+	}
+	
+	public WebElement confereElementoTexto(String xpath) 
+	{
+		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.xpath("//a[contains(text(),'"+xpath+"')]")));
+		return configNavegadores.getElemento();	
+	}
+	
+	public WebElement confereElementoBotao(String xpath) 
+	{		
+		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.name(xpath)));
+		return configNavegadores.getElemento();		
+	}
+	
+	public WebElement confereElementoId(String xpath) 
+	{	
+		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.id(xpath)));
+		return configNavegadores.getElemento();
+	}
+		
+	public WebElement preencheDados(String xpath,String dados ) 
+	{
+		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.id(xpath)));
+		configNavegadores.getElemento().sendKeys(dados);
+		return configNavegadores.getElemento();
+	}
+	
+	public void acionaBotao() 
+	{			
+		if(configNavegadores.getElemento().isEnabled()) {configNavegadores.getElemento().click();}
+	}
+	
+	public void fechaNavegador() 
+	{		
+		configNavegadores.getDriver().quit();		
+	}
+	
+}

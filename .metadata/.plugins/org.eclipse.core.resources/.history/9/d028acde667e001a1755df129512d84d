@@ -1,0 +1,82 @@
+package Pagina;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
+
+import BaseTestes.BaseTestes;
+import Servicos.CapturaTela;
+import Servicos.GeraRelatorio;
+import cucumber.api.java.de.Aber;
+
+public class Formulario2 extends BaseTestes {
+	
+	int tempoMilisegundos= 5000;
+
+	public void CarregaPagina() 
+	{				
+			abreNavegador();
+
+	}
+	
+	public WebElement verificaElementoTexto(String elemento) 
+	{
+		Thread tempo = new Thread();
+		
+		synchronized(tempo) 
+		{
+			
+			try 
+			{				
+				confereElementoTexto(elemento);
+				tempo.wait(tempoMilisegundos);
+				
+			}catch(Exception e) {}
+			
+			
+		}
+		
+		return	confereElementoTexto(elemento);		
+		
+	}
+	
+	public WebElement verificaElementoBotao(String elemento) 
+	{
+		return  confereElementoBotao(elemento);		
+	}
+	
+	public WebElement verificaElementoId(String elemento) 
+	{
+		return  confereElementoId(elemento);		
+	}
+	
+	public WebElement preencheCampoAutomatico(String elemento, String dados)
+	{
+		return preencheDados(elemento,dados);
+	}
+
+	public void Clicar(String step) 
+	{
+		acionaBotao(step);
+	}
+	
+	public void fecharPagina() 
+	{
+		
+		Thread tempo = new Thread();
+		
+			synchronized(tempo) 
+			{
+			
+				try 
+				{	
+					tempo.wait(tempoMilisegundos);
+					fechaNavegador(getClass().getName());
+					
+				}catch(Exception e) {}
+		
+			}
+	
+	}
+	
+
+}

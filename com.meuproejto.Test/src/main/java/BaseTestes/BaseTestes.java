@@ -1,4 +1,4 @@
-package BaseTestes;
+package baseTestes;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,59 +7,67 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 
-import Configuracao.ConfigNavegadores;
-import Configuracao.ConfigRelatorios;
+import Servicos.CapturaTela;
+import Servicos.GeraRelatorio;
+import configuracaoTestes.ConfigNavegadores;
+import configuracaoTestes.ConfigRelatorios;
 
 public class BaseTestes {
 	
-	ConfigNavegadores config  =  new ConfigNavegadores();
-	ConfigRelatorios  config2 =  new ConfigRelatorios ();
+	ConfigNavegadores configNavegadores  =  new ConfigNavegadores();
+	GeraRelatorio     relatorio          =  new GeraRelatorio ();
+	CapturaTela		  tela               =  new CapturaTela();
 	
-	public void abreNavegador() 
+	public void abreNavegador(String documento) 
 	{
-		//config.chromeNavegador();
-		//config.edgeNavegador();
-		//config.ieNavegador();
-		config.firefoxNavegador();
+		//configNavegadores.chromeNavegador();
+		//configNavegadores.edgeNavegador();
+		//configNavegadores.ieNavegador();
+		configNavegadores.firefoxNavegador();
+		relatorio.gerarDocumento(documento);
 		
 	}
 	
 	public WebElement confereElementoTexto(String xpath) 
 	{
-		config.setElemento(config.getDriver().findElement(By.xpath("//a[contains(text(),'"+xpath+"')]")));
-		return config.getElemento();	
+		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.xpath("//a[contains(text(),'"+xpath+"')]")));
+		return configNavegadores.getElemento();	
 	}
 	
 	public WebElement confereElementoBotao(String xpath) 
 	{		
-		config.setElemento(config.getDriver().findElement(By.name(xpath)));
-		return config.getElemento();		
+		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.name(xpath)));
+		return configNavegadores.getElemento();		
 	}
 	
 	public WebElement confereElementoId(String xpath) 
 	{	
-		config.setElemento(config.getDriver().findElement(By.id(xpath)));
-		return config.getElemento();
+		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.id(xpath)));
+		return configNavegadores.getElemento();
 	}
 		
 	public WebElement preencheDados(String xpath,String dados ) 
 	{
-		config.setElemento(config.getDriver().findElement(By.id(xpath)));
-		config.getElemento().sendKeys(dados);
-		return config.getElemento();
+		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.id(xpath)));
+		configNavegadores.getElemento().sendKeys(dados);
+		return configNavegadores.getElemento();
 	}
 	
-	public void acionaBotao() 
+	public void acionaBotao(String cabecalho) 
 	{			
-		if(config.getElemento().isEnabled()) {config.getElemento().click();}
+		if(configNavegadores.getElemento().isEnabled()) 
+		{	
+			configNavegadores.getElemento().click();
+			tela.print();
+			relatorio.incluirPagina(cabecalho);
+		}
 	}
 	
-	public void fechaNavegador() 
-	{		
-		config.getDriver().quit();		
+	public void fechaNavegador(String nomePagina) 
+	{	
+		relatorio.incluirPagina("Teste Finalizado");
+		relatorio.encerrarDocumento(nomePagina);
+		configNavegadores.getDriver().quit();		
 	}
 	
-
-	
-
 }

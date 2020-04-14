@@ -1,0 +1,42 @@
+package Definicoes;
+
+import Pagina.ListarFormulario;
+import cucumber.api.java.es.Dado;
+import cucumber.api.java.it.Quando;
+import cucumber.api.java.pt.Entao;
+
+public class DefAcessoListarFormulario  {
+	
+	ListarFormulario automacaobatista= new ListarFormulario();
+	
+	
+	@Dado("Ao acessar a tela de funcoes")
+	public void Ao_acessar_a_tela_de_funcoes() throws Throwable 
+	{
+		automacaobatista.CarregaPagina();
+		automacaobatista.verificaElementoTexto("Começar Automação Web","step 1");
+		automacaobatista.Clicar();
+	}
+		
+	@Quando("^Clicar em listar usuarios$")
+	public void clicar_em_listar_usuarios() throws Throwable {
+		
+		automacaobatista.verificaElementoTexto("Formulário","step 2"); automacaobatista.Clicar();
+		automacaobatista.verificaElementoTexto("Lista de Usuários","step 3"); automacaobatista.Clicar();		
+	   
+	}
+	
+	@Entao("Passar pelas paginas")
+	public void Passar_pelas_paginas() throws Throwable 
+	{
+		
+		automacaobatista.verificaElementoTexto("Próximo","step 4"); automacaobatista.Clicar();
+		automacaobatista.verificaElementoTexto("Próximo","step 5"); automacaobatista.Clicar();
+		automacaobatista.verificaElementoTexto("Próximo","step 6"); automacaobatista.Clicar();		
+	
+		automacaobatista.fecharPagina();		
+	}
+	
+
+	
+}
