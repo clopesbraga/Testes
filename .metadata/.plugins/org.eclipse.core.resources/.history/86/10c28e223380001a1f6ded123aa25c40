@@ -25,6 +25,7 @@ public class Def_TestPagina_Formulario2 {
 	{	
 		automacaobatista.verificaElementoTexto("Criar Usuários"); automacaobatista.Clicar("step 3");				
 	}
+	
 			
 	@Entao("^Completar os campos: \"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\"$")
 	public void completar_os_campos(String name, String lastname, String email, String endereco, String universidade, String profissao, String genero, String idade) throws Throwable
