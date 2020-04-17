@@ -42,7 +42,6 @@
 <fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfWriter"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.PageSize"/>
-<fullyQualifiedTypeName name="com.itextpdf.text.DocumentException"/>
 <fullyQualifiedTypeName name="Servicos.GerarRelatorio"/>
 <fullyQualifiedTypeName name="Configuracao.ConfigRelatorios"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Image"/>
@@ -58,4 +57,5 @@
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="Servicos.GeraRelatorio"/>
 <fullyQualifiedTypeName name="Servicos.CapturaTela"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.DocumentException"/>
 </qualifiedTypeNameHistroy>

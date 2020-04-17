@@ -48,9 +48,9 @@ public class Pagina_BuscaelementosBotoes extends BaseTestes {
 		return  confereElementoId(elemento);	
 	}
 	
-	public void Clicar(String step) 
+	public void Clicar(String step,String condicao,String descricao) 
 	{
-		acionaBotao(step);
+		acionaBotao(step,condicao,descricao);
 	}
 
 	public void fecharPagina() 

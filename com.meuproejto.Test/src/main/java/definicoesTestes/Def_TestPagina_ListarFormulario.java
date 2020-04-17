@@ -14,15 +14,19 @@ public class Def_TestPagina_ListarFormulario  {
 	public void ao_acessar_a_tela_de_funcoes() throws Throwable 
 	{
 		automacaobatista.CarregaPagina();
+		
 		automacaobatista.verificaElementoTexto("Começar Automação Web");
-		automacaobatista.Clicar("step 1");
+		automacaobatista.Clicar("step 1","@Dado:","Ao acessar a tela de funcoes");
 	}
 		
 	@Quando("^Clicar em listar usuarios$")
 	public void clicar_em_listar_usuarios() throws Throwable {
 		
-		automacaobatista.verificaElementoTexto("Formulário"); automacaobatista.Clicar("step 2");
-		automacaobatista.verificaElementoTexto("Lista de Usuários"); automacaobatista.Clicar("step 3");		
+		automacaobatista.verificaElementoTexto("Formulário"); 
+		automacaobatista.Clicar("step 2","@Quando:","Clicar em listar usuarios");
+		
+		automacaobatista.verificaElementoTexto("Lista de Usuários"); 
+		automacaobatista.Clicar("step 3","@Quando:","Clicar em listar usuarios");		
 	   
 	}
 	
@@ -30,9 +34,14 @@ public class Def_TestPagina_ListarFormulario  {
 	public void passar_pelas_paginas() throws Throwable 
 	{
 		
-		automacaobatista.verificaElementoTexto("Próximo"); automacaobatista.Clicar("step 4");
-		automacaobatista.verificaElementoTexto("Próximo"); automacaobatista.Clicar("step 5");
-		automacaobatista.verificaElementoTexto("Próximo"); automacaobatista.Clicar("step 6");		
+		automacaobatista.verificaElementoTexto("Próximo"); 
+		automacaobatista.Clicar("step 4","@Entao:","Passar pelas paginas");
+		
+		automacaobatista.verificaElementoTexto("Próximo"); 
+		automacaobatista.Clicar("step 5","@Entao:","Passar pelas paginas");
+		
+		automacaobatista.verificaElementoTexto("Próximo"); 
+		automacaobatista.Clicar("step 6","@Entao:","Passar pelas paginas");		
 	
 		automacaobatista.fecharPagina();		
 	}

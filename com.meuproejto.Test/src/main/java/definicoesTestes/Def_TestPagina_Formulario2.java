@@ -16,14 +16,18 @@ public class Def_TestPagina_Formulario2 {
 	{
 	  
 		automacaobatista.CarregaPagina();
-		automacaobatista.verificaElementoTexto("Começar Automação Web");automacaobatista.Clicar("step 1");
-		automacaobatista.verificaElementoTexto("Formulário"); automacaobatista.Clicar("step 2");
+		automacaobatista.verificaElementoTexto("Começar Automação Web");
+		automacaobatista.Clicar("step 1","@Dado:","Ao iniciar o processo de Preencher varios forumularios");
+		
+		automacaobatista.verificaElementoTexto("Formulário"); 
+		automacaobatista.Clicar("step 2","@Dado:","Ao iniciar o processo de Preencher varios forumularios");
 	}
 		
 	@Quando("^Ir na opcao novo usuario$")
 	public void ir_na_opcao_novo_usuario() throws Throwable 
 	{	
-		automacaobatista.verificaElementoTexto("Criar Usuários"); automacaobatista.Clicar("step 3");				
+		automacaobatista.verificaElementoTexto("Criar Usuários"); 
+		automacaobatista.Clicar("step 3","@Quando:","Ir na opcao novo usuario");				
 	}
 			
 	@Entao("^Completar os campos: \"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\"$")
@@ -38,7 +42,7 @@ public class Def_TestPagina_Formulario2 {
 					automacaobatista.preencheCampoAutomatico("user_gender",genero);
 					automacaobatista.preencheCampoAutomatico("user_age",idade);
 					
-					automacaobatista.verificaElementoBotao("commit");automacaobatista.Clicar("step 4");
+					automacaobatista.verificaElementoBotao("commit");automacaobatista.Clicar("step 4","@Entao:","Completar os campos");
 					automacaobatista.fecharPagina();	
 												
      }	

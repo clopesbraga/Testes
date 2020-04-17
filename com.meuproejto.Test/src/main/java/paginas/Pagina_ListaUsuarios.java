@@ -75,9 +75,9 @@ public class Pagina_ListaUsuarios extends BaseTestes {
 	
 	}
 	
-	public void Clicar(String step) 
+	public void Clicar(String step, String condicaco, String descricao) 
 	{
-		acionaBotao(step);
+		acionaBotao(step, condicaco,descricao);
 	}
 	
 }

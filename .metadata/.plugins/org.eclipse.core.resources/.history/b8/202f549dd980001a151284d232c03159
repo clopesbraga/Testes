@@ -1,0 +1,46 @@
+package definicoesTestes;
+
+import cucumber.api.java.es.Dado;
+import cucumber.api.java.it.Quando;
+import cucumber.api.java.pt.Entao;
+import paginas.Pagina_BuscaelementosBotoes;
+
+public class Def_TestPagina_Botao {
+	
+	private String condicional;
+	private String descricao;
+	
+	Pagina_BuscaelementosBotoes automacaobatista= new Pagina_BuscaelementosBotoes();
+	
+	@Dado("Ao acessar a pagina automacaobatista")
+	public void IniciarTesteBotao() 
+	{
+		condicional="@Dado:";
+		descricao  ="Ao acessar a pagina automacaobatista";
+		
+		automacaobatista.CarregaPagina();
+		automacaobatista.verificaElementoTexto("Começar Automação Web");
+		automacaobatista.Clicar("Step 1",condicional,descricao);
+	}
+		
+	@Quando("Acessar os testes de botoes")
+	public void acessarBotoes() 
+	{		
+		automacaobatista.verificaElementoTexto("Busca de elementos");
+		automacaobatista.Clicar("Step 2","Quando","Acessar os testes de botoes");
+		
+		automacaobatista.verificaElementoTexto("Botões"); 
+		automacaobatista.Clicar("Step 3","Quando","Acessar os testes de botoes");				
+	}
+	
+	@Entao("Realizar os testes de click")
+	public void clickTestes()
+	{		
+		automacaobatista.verificaElementoId("teste"); 
+		automacaobatista.Clicar("Step 4","Entao","Realizar os testes de click");	
+		automacaobatista.fecharPagina();	
+	}
+	
+
+	
+}

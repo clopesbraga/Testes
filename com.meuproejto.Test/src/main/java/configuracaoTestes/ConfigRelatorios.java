@@ -48,8 +48,7 @@ public void  geraPDF(String nomedocumento )
 {	
 	try 
 		{
-			//PdfWriter.getInstance(pdf,new FileOutputStream("C:/Users/Cleiton Braga/eclipse-workspace/Testes/com.meuproejto.Test/relatorios/Relatorio_"+nomedocumento+".pdf"));
-		PdfWriter.getInstance(pdf,new FileOutputStream(""+diretorio+""+nomedocumento+""+".pdf"));
+			PdfWriter.getInstance(pdf,new FileOutputStream(""+diretorio+""+nomedocumento+""+".pdf"));
 			pdf.open();
 			pdf.setPageSize(PageSize.A4);
 			
@@ -58,17 +57,21 @@ public void  geraPDF(String nomedocumento )
 }
 
 
-public void  incluirPagina(String cabecalho) 
+public void  incluirPagina(String cabecalho,String titulo,String descricao) 
 {
 	
 	try {
 		
 			Image steps = Image.getInstance(evidencia);
+			
 			pdf.newPage();
 			pdf.add(new Paragraph(cabecalho));
-			steps.scaleToFit(evidenciascalax,evidenciascalay);
-			pdf.add(steps);
 			gerarLogo();
+			steps.scaleToFit(evidenciascalax,evidenciascalay);
+			
+			corpoTexto(titulo,descricao);
+			pdf.add(steps);
+			
 					
 	   } catch (DocumentException e) {e.printStackTrace();
 	   } catch (MalformedURLException e) {e.printStackTrace();
@@ -76,6 +79,24 @@ public void  incluirPagina(String cabecalho)
 	
 }
 
+
+public void corpoTexto(String titulo, String descricao) 
+{
+	
+	PdfPTable tab_descricao = new PdfPTable(1);
+	tab_descricao.getDefaultCell().setBorder(0);
+	
+	tab_descricao.addCell(titulo);
+	tab_descricao.addCell(descricao);
+	tab_descricao.setHorizontalAlignment(Element.ALIGN_LEFT);
+	
+	try 
+	{
+		pdf.add(tab_descricao);
+		
+	}catch(DocumentException descr) {}
+
+}
 
 public void incluirImagem(Image imagem) throws DocumentException 
 {	
@@ -136,6 +157,9 @@ public void  encerrarPDF()
 	pdf.close();
 
 }
+
+
+
 
 
 }

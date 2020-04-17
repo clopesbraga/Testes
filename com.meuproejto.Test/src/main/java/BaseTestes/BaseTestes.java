@@ -53,19 +53,19 @@ public class BaseTestes {
 		return configNavegadores.getElemento();
 	}
 	
-	public void acionaBotao(String cabecalho) 
+	public void acionaBotao(String cabecalho,String titulo, String texto) 
 	{			
 		if(configNavegadores.getElemento().isEnabled()) 
 		{	
 			configNavegadores.getElemento().click();
 			tela.print();
-			relatorio.incluirPagina(cabecalho);
+			relatorio.incluirPagina(cabecalho,titulo,texto);
 		}
 	}
 	
 	public void fechaNavegador(String nomePagina) 
 	{	
-		relatorio.incluirPagina("Teste Finalizado");
+		relatorio.incluirPagina("Teste Finalizado"," "," ");
 		relatorio.encerrarDocumento(nomePagina);
 		configNavegadores.getDriver().quit();		
 	}

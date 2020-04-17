@@ -11,9 +11,9 @@ public class GeraRelatorio {
 		config.geraPDF(documento);	
 	}
 	
-	public void incluirPagina(String cabecalho)
+	public void incluirPagina(String cabecalho,String titulo,String descricao)
 	{
-		config.incluirPagina(cabecalho);
+		config.incluirPagina(cabecalho,titulo,descricao);
 	}
 	
 	public void encerrarDocumento(String nomePagina) 

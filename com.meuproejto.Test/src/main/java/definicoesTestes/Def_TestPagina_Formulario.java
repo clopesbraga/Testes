@@ -15,15 +15,20 @@ public class Def_TestPagina_Formulario {
 	{
 	   
 		automacaobatista.CarregaPagina();
-		automacaobatista.verificaElementoTexto("Começar Automação Web");automacaobatista.Clicar("step 1");
-		automacaobatista.verificaElementoTexto("Formulário"); automacaobatista.Clicar("step 2");
+		
+		automacaobatista.verificaElementoTexto("Começar Automação Web");
+		automacaobatista.Clicar("step 1","@Dado:","Verificar a opcao de formularios");
+		
+		automacaobatista.verificaElementoTexto("Formulário"); 
+		automacaobatista.Clicar("step 2","@Dado:","Verificar a opcao de formularios");
 		
 	}
 	
 	@Quando("^Clicar em novo usuario$")
 	public void clicar_em_novo_usuario() throws Throwable {
 		
-		automacaobatista.verificaElementoTexto("Criar Usuários"); automacaobatista.Clicar("step 3");
+		automacaobatista.verificaElementoTexto("Criar Usuários"); 
+		automacaobatista.Clicar("step 3","@Quando:","Clicar em novo usuario");
 		
 	}
 	
@@ -41,7 +46,9 @@ public class Def_TestPagina_Formulario {
 		automacaobatista.preencheDados("user_age","38");
 		
 		
-		automacaobatista.verificaElementoBotao("commit");automacaobatista.Clicar("step 4");
+		automacaobatista.verificaElementoBotao("commit");
+		automacaobatista.Clicar("step 4","@Entao:","Preencher os campos");
+		
 		automacaobatista.fecharPagina();		
 	}
 	

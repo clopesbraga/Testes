@@ -12,21 +12,28 @@ public class Def_TestPagina_Botao {
 	@Dado("Ao acessar a pagina automacaobatista")
 	public void IniciarTesteBotao() 
 	{
+		
+		
 		automacaobatista.CarregaPagina();
-		automacaobatista.verificaElementoTexto("Começar Automação Web");automacaobatista.Clicar("Step 1");
+		automacaobatista.verificaElementoTexto("Começar Automação Web");
+		automacaobatista.Clicar("Step 1","@Dado:","Ao acessar a pagina automacaobatista");
 	}
 		
 	@Quando("Acessar os testes de botoes")
 	public void acessarBotoes() 
 	{		
-		automacaobatista.verificaElementoTexto("Busca de elementos"); automacaobatista.Clicar("Step 2");
-		automacaobatista.verificaElementoTexto("Botões"); automacaobatista.Clicar("Step 3");				
+		automacaobatista.verificaElementoTexto("Busca de elementos");
+		automacaobatista.Clicar("Step 2","@Quando:","Acessar os testes de botoes");
+		
+		automacaobatista.verificaElementoTexto("Botões"); 
+		automacaobatista.Clicar("Step 3","@Quando:","Acessar os testes de botoes");				
 	}
 	
 	@Entao("Realizar os testes de click")
 	public void clickTestes()
 	{		
-		automacaobatista.verificaElementoId("teste"); automacaobatista.Clicar("Step 4");	
+		automacaobatista.verificaElementoId("teste"); 
+		automacaobatista.Clicar("Step 4","@Entao:","Realizar os testes de click");	
 		automacaobatista.fecharPagina();	
 	}
 	
