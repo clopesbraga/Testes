@@ -1,0 +1,13 @@
+#language:pt
+
+@alertas
+Funcionalidade: Testar funcionalidade dos alertas
+
+
+@cenario1
+Cenario: Acionar alerta em Java Script
+Dado    O acesso clicando na opcao Mudanca de foco
+Quando  Clicar na opcao na opcao Alert
+Entao	  Clicar na opcao JS Alert
+
+

@@ -58,4 +58,6 @@
 <fullyQualifiedTypeName name="Servicos.GeraRelatorio"/>
 <fullyQualifiedTypeName name="Servicos.CapturaTela"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.DocumentException"/>
+<fullyQualifiedTypeName name="baseTestes.BaseTestes"/>
+<fullyQualifiedTypeName name="cucumber.api.java.gl.E"/>
 </qualifiedTypeNameHistroy>

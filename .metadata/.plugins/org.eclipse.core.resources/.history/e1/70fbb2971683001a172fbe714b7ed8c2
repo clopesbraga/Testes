@@ -1,0 +1,41 @@
+package definicoesTestes;
+
+import cucumber.api.java.es.Dado;
+import cucumber.api.java.it.Quando;
+import cucumber.api.java.pt.Entao;
+import paginas.Pagina_Alerta;
+
+public class Def_TestPagina_Alerta {
+	
+	
+Pagina_Alerta automacaobatista= new Pagina_Alerta();
+	
+	@Dado("Ao acessar a pagina automacaobatista")
+	public void ao_acessar_a_pagina_automacaobatista() 
+	{
+		
+		
+		automacaobatista.CarregaPagina();
+		automacaobatista.verificaElementoTexto("Começar Automação Web");
+		automacaobatista.Clicar("Step 1","@Dado:","Ao acessar a pagina automacaobatista");
+	}
+		
+	@Quando("Clicar na opcao Mudanca de foco")
+	public void clicar_na_opcao_mudanca_de_foco() 
+	{		
+		automacaobatista.verificaElementoTexto("Busca de elementos");
+		automacaobatista.Clicar("Step 2","@Quando:","Acessar os testes de botoes");
+		
+		automacaobatista.verificaElementoTexto("Botões"); 
+		automacaobatista.Clicar("Step 3","@Quando:","Acessar os testes de botoes");				
+	}
+	
+	@Entao("Realizar os testes no botão JS Alert")
+	public void realizar_os_testes_no_botao_jsalert()
+	{		
+		
+		automacaobatista.Clicar("Step 4","@Entao:","Realizar os testes de click");	
+		automacaobatista.fecharPagina();	
+	}
+
+}

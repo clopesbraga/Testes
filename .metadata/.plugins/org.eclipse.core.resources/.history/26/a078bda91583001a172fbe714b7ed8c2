@@ -1,0 +1,12 @@
+#language: pt
+
+Funcionalidade: Testar mensagem de alerta
+
+@Cenario1
+ Cenario: Testar alerta feito em Java Script
+ Dado     Ao clicar na opcao Mudanca de foco
+ Quando   Clicar na opcao Alert
+ Entao    Realizar os testes no botão JS Alert
+ 
+ 
+ 

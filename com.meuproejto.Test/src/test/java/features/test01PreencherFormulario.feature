@@ -1,16 +1,17 @@
-#language: pt
+#language:pt
 
-Funcionalidade: Acesso site
+@formularios
+Funcionalidade: Verificar funcionalidade dos formularios
 
 
- @Cenario1 
+ @cenario1 
  Cenario: Preencher um usuario no Forumlario
  Dado     Verificar   a opcao de formularios
  Quando   Clicar em novo usuario
  Entao    Preencher os campos
       
  
- @Cenario2 
+ @cenario2 
  Esquema do Cenario: Preencher diversos usuarios Forumlario
  
  Dado     Ao iniciar o processo de Preencher varios forumularios
@@ -23,8 +24,7 @@ Funcionalidade: Acesso site
       |Octaviano|Nuna Freitas   | ak47@gmail.com 				|Rua Montes Aureos| Uninove         |Analista N3  |masc       |37      |
       
 
-
- @Cenario3 
+ @cenario3 
  Cenario: Listando usuarios cadastrados
  Dado     Ao acessar a tela de funcoes
  Quando   Clicar em listar usuarios

@@ -1,0 +1,18 @@
+package paginas;
+
+import baseTestes.BaseTestes;
+
+public class Pagina_Alerta extends BaseTestes
+{
+	
+	int tempoMilisegundos = 5000;
+	
+	public void CarregaPagina() 
+	{				
+			abreNavegador(getClass().getName());
+	}
+	
+	
+	
+
+}

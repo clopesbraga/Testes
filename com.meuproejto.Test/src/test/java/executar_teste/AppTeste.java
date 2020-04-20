@@ -12,13 +12,12 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions
 (
-		glue= 	  {"definicoesTestes"},
-		features= {"./src/test/java/features/test01PreencherFormulario.feature"}
+		glue= 	    {"definicoesTestes"},
+		//features= {"./src/test/java/features/test01PreencherFormulario.feature"}
 		//features= {"./src/test/java/features/test02VerficarBotoes.feature"}
+		features=   {"./src/test/java/features/test03PreencherAlertas.feature"}
 )
 
 public class AppTeste {
-
 	
-
 }

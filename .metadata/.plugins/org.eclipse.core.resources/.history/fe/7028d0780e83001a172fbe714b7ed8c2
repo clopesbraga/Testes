@@ -1,0 +1,11 @@
+package paginas;
+
+import baseTestes.BaseTestes;
+
+public class Pagina_Alerta extends BaseTestes
+{
+	
+	
+	
+
+}

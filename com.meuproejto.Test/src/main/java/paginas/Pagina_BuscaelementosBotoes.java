@@ -54,8 +54,7 @@ public class Pagina_BuscaelementosBotoes extends BaseTestes {
 	}
 
 	public void fecharPagina() 
-	{
-			
+	{			
 		Thread tempo = new Thread();
 		
 			synchronized(tempo) 

@@ -36,7 +36,7 @@ public class BaseTestes {
 	
 	public WebElement confereElementoBotao(String xpath) 
 	{		
-		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.name(xpath)));
+		configNavegadores.setElemento(configNavegadores.getDriver().findElement(By.xpath(("//button[contains(text(),'"+xpath+"')]"))));
 		return configNavegadores.getElemento();		
 	}
 	
