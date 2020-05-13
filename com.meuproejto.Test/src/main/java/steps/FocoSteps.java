@@ -1,10 +1,10 @@
-package definicoesTestes;
+package steps;
 
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.gl.E;
 import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Entao;
-import paginas.Pagina_Alerta;
+import pages.Pagina_Alerta;
 
 public class FocoSteps {
 	

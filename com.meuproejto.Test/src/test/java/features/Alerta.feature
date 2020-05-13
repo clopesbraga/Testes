@@ -2,7 +2,7 @@
 
 Funcionalidade: Testar mensagem de alerta
 
-@Cenario1
+@cenario1
  Cenario: Testar alerta feito em Java Script
  Dado     O acesso a pagina automacaobatista
  Quando   Clicar na opcao Mudanca de foco

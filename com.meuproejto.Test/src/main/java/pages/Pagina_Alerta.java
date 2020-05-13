@@ -1,8 +1,8 @@
-package paginas;
+package pages;
 
 import org.openqa.selenium.WebElement;
 
-import baseTestes.BaseTestes;
+import basePages.BaseTestes;
 
 public class Pagina_Alerta extends BaseTestes
 {

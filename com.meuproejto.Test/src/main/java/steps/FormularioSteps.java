@@ -1,9 +1,9 @@
-package definicoesTestes;
+package steps;
 
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Entao;
-import paginas.Pagina_CriaUsuario;
+import pages.Pagina_CriaUsuario;
 
 public class FormularioSteps {
 	

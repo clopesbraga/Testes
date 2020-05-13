@@ -1,11 +1,11 @@
-package paginas;
+package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 
 import Servicos.CapturaTela;
 import Servicos.GeraRelatorio;
-import baseTestes.BaseTestes;
+import basePages.BaseTestes;
 import cucumber.api.java.de.Aber;
 
 public class Pagina_CriaUsuario extends BaseTestes {
